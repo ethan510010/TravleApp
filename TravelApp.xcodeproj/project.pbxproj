@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D63F8DD61FFB1B3F00C4CDE9 /* TwoBigViewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63F8DD51FFB1B3F00C4CDE9 /* TwoBigViewsCell.swift */; };
+		D63F8DD81FFB1B6F00C4CDE9 /* ThreeSmallViewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63F8DD71FFB1B6F00C4CDE9 /* ThreeSmallViewsCell.swift */; };
+		D63F8DDA1FFB1BA700C4CDE9 /* OneBigViewOneSmallViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63F8DD91FFB1BA700C4CDE9 /* OneBigViewOneSmallViewCell.swift */; };
+		D63F8E371FFB667400C4CDE9 /* MyWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63F8E361FFB667400C4CDE9 /* MyWebViewController.swift */; };
 		D69F97C71FF60A2F007A865F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F97C61FF60A2F007A865F /* AppDelegate.swift */; };
 		D69F97CC1FF60A2F007A865F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69F97CA1FF60A2F007A865F /* Main.storyboard */; };
 		D69F97CE1FF60A2F007A865F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69F97CD1FF60A2F007A865F /* Assets.xcassets */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D63F8DD51FFB1B3F00C4CDE9 /* TwoBigViewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoBigViewsCell.swift; sourceTree = "<group>"; };
+		D63F8DD71FFB1B6F00C4CDE9 /* ThreeSmallViewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeSmallViewsCell.swift; sourceTree = "<group>"; };
+		D63F8DD91FFB1BA700C4CDE9 /* OneBigViewOneSmallViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneBigViewOneSmallViewCell.swift; sourceTree = "<group>"; };
+		D63F8E361FFB667400C4CDE9 /* MyWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebViewController.swift; sourceTree = "<group>"; };
 		D69F97C31FF60A2F007A865F /* TravelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69F97C61FF60A2F007A865F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D69F97CB1FF60A2F007A865F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +51,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D63F8DD41FFB1AEC00C4CDE9 /* RepeatSection */ = {
+			isa = PBXGroup;
+			children = (
+				D63F8DD51FFB1B3F00C4CDE9 /* TwoBigViewsCell.swift */,
+				D63F8DD71FFB1B6F00C4CDE9 /* ThreeSmallViewsCell.swift */,
+				D63F8DD91FFB1BA700C4CDE9 /* OneBigViewOneSmallViewCell.swift */,
+			);
+			path = RepeatSection;
+			sourceTree = "<group>";
+		};
 		D69F97BA1FF60A2F007A865F = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +86,8 @@
 				D69F97DA1FF60C9F007A865F /* ImageTableViewCell.swift */,
 				D69F97DC1FF61474007A865F /* MapTableViewCell.swift */,
 				D69F97E01FF616F8007A865F /* CollectionTableViewCell */,
+				D63F8DD41FFB1AEC00C4CDE9 /* RepeatSection */,
+				D63F8E361FFB667400C4CDE9 /* MyWebViewController.swift */,
 				D69F97CD1FF60A2F007A865F /* Assets.xcassets */,
 				D69F97CF1FF60A2F007A865F /* LaunchScreen.storyboard */,
 				D69F97D21FF60A2F007A865F /* Info.plist */,
@@ -156,9 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D63F8DDA1FFB1BA700C4CDE9 /* OneBigViewOneSmallViewCell.swift in Sources */,
+				D63F8E371FFB667400C4CDE9 /* MyWebViewController.swift in Sources */,
 				D69F97DF1FF61676007A865F /* CollectionTableViewCell.swift in Sources */,
 				D69F97DB1FF60C9F007A865F /* ImageTableViewCell.swift in Sources */,
 				D6C7759C1FF617F800486A2B /* MyCollectionViewCell.swift in Sources */,
+				D63F8DD81FFB1B6F00C4CDE9 /* ThreeSmallViewsCell.swift in Sources */,
+				D63F8DD61FFB1B3F00C4CDE9 /* TwoBigViewsCell.swift in Sources */,
 				D69F97D91FF60BAB007A865F /* MainTableViewController.swift in Sources */,
 				D69F97DD1FF61474007A865F /* MapTableViewCell.swift in Sources */,
 				D69F97C71FF60A2F007A865F /* AppDelegate.swift in Sources */,
