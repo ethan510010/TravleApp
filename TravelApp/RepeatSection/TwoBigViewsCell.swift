@@ -11,6 +11,7 @@ import UIKit
 protocol TwoBigViewsDelegate{
     func didTapLeftButtonForTwoBigViewsCell()
     func didTapRightButtonForTwoBigViewsCell()
+
 }
 
 
@@ -19,7 +20,19 @@ class TwoBigViewsCell: UITableViewCell {
     
     var delegateforTwoBigViewsCell:TwoBigViewsDelegate?
     
+    var data: Any?
     
+    func loadContent() {
+        
+        if let model = data as? Section3Model {
+            leftImageView.image = model.leftImage
+            leftLabel.text = model.leftText
+            
+            rightImageView.image = model.rightImage
+            rightLabel.text = model.rightText
+        }
+        
+    }
     
     //處理左邊按鈕的事件
     

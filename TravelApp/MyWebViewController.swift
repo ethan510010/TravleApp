@@ -10,11 +10,17 @@ import UIKit
 
 class MyWebViewController: UIViewController {
 
+    var urlFromViewOne:String?
+    
     @IBOutlet weak var myWebView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let url = URL(string: urlFromViewOne!){
+            let request = URLRequest(url: url)
+            myWebView.loadRequest(request)
+        }
+        
         // Do any additional setup after loading the view.
     }
 

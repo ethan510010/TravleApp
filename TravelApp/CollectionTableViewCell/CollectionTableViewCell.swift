@@ -51,9 +51,9 @@ class CollectionTableViewCell: UITableViewCell,UICollectionViewDelegate, UIColle
     
     
     //偵測collectionView中哪個item被點到(item也是從0開始算)
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.item)
+    }
     
     
     override func awakeFromNib() {

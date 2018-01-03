@@ -10,52 +10,71 @@ import UIKit
 
 class MainTableViewController: UITableViewController, TwoBigViewsDelegate, ThreeSmallViewsDelegate, OneBigViewOneSmallViewDelegate{
     
+    class func showWebView(url:String) {
+        
+    }
+    
+    
+     //建立URL資訊
+    var urlArray = ["https://www.apple.com/tw/", "https://tw.yahoo.com","https://www.google.com.tw/?gfe_rd=cr&dcr=0&ei=AUlLWsTOGsqiX4XEueAB","https://hackmd.io","https://www.tripadvisor.com.tw","https://tw.openrice.com/zh/taipei","https://www.icloud.com"]
+    
+    
     //處理RepeatSection的第三個Cell(OneBigViewOneSmallViewCell)
     func didTapLeftButtonForOneBigViewOneSmallView() {
-        performSegue(withIdentifier: "TurntoWebViewSegue", sender: nil)
+        let urlOfLeftButtonForOneBigViewOneSmallView = urlArray[5]
+        performSegue(withIdentifier: "TurntoWebViewSegue", sender: urlOfLeftButtonForOneBigViewOneSmallView)
     }
     
     func didTapRightButtonForOneBigViewOneSmallView() {
-        performSegue(withIdentifier: "TurntoWebViewSegue", sender: nil)
+        let urlOfRightButtonForOneBigViewOneSmallView = urlArray[6]
+        performSegue(withIdentifier: "TurntoWebViewSegue", sender: urlOfRightButtonForOneBigViewOneSmallView)
     }
     
-    //處理RepeatSection的第二個Cell(ThreesmallViewsCell)
+    //處理RepeatSection的第二個Cell(ThreeSmallViewsCell)
     func didTapLeftButtonForThreeSmallViews() {
-        performSegue(withIdentifier: "TurntoWebViewSegue", sender: nil)
+        let urlOfLeftButtonForThreeSmallViews = urlArray[2]
+        performSegue(withIdentifier: "TurntoWebViewSegue", sender: urlOfLeftButtonForThreeSmallViews)
     }
     
     func didTapcenterButtonForThreeSmallViews() {
-        performSegue(withIdentifier: "TurntoWebViewSegue", sender: nil)
+        let urlOfcenterButtonForThreeSmallViews = urlArray[3]
+        performSegue(withIdentifier: "TurntoWebViewSegue", sender: urlOfcenterButtonForThreeSmallViews)
     }
     
     func didTapRightButtonForThreeSmallViews() {
-        performSegue(withIdentifier: "TurntoWebViewSegue", sender: nil)
+        let urlOfRightButtonForThreeSmallViews = urlArray[4]
+        performSegue(withIdentifier: "TurntoWebViewSegue", sender: urlOfRightButtonForThreeSmallViews)
     }
     
     
     
     //處理RepeatSection的第一個Cell(TwoBigViewsCell)
     func didTapLeftButtonForTwoBigViewsCell() {
-        performSegue(withIdentifier: "TurntoWebViewSegue", sender: nil)
+        let urlOfLeftButtonForTwoBigViewsCell = urlArray[0]
+        performSegue(withIdentifier: "TurntoWebViewSegue", sender: urlOfLeftButtonForTwoBigViewsCell)
     }
     
     func didTapRightButtonForTwoBigViewsCell() {
-        performSegue(withIdentifier: "TurntoWebViewSegue", sender: nil)
+        let urlOfRightButtonForTwoBigViewsCell = urlArray[1]
+        performSegue(withIdentifier: "TurntoWebViewSegue", sender: urlOfRightButtonForTwoBigViewsCell)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "TurntoWebViewSegue"{
-//            if let webView = segue.destination as? MyWebViewController{
-//                webView.myWebView
-//            }
-//        }
-//    }
+    //點按RepeatSection Cell中的按鈕會進到一個WebView
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "TurntoWebViewSegue"{
+            if let webView = segue.destination as? MyWebViewController{
+                if let myUrl = sender as? String{
+                    webView.urlFromViewOne = myUrl
+                }
+            }
+        }
+    }
     
 
     //建立圖片陣列(一開始的動畫列要用的)
     var sceneArray = ["s1","s2","s3","s4","s5","s6","s7","s8","s9","s10","s11","s12","s13","s14","s15","s16","s17","s18"]
     
-    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,19 +132,28 @@ class MainTableViewController: UITableViewController, TwoBigViewsDelegate, Three
             return cell
         // Repeat Section的部分
         }else if indexPath.section == 3{
+            
             if indexPath.row == 0 {
                let cell = tableView.dequeueReusableCell(withIdentifier: "twoBigViewsCell", for: indexPath) as! TwoBigViewsCell
+                let model = Section3Model(leftImage: UIImage(named:"s1")!,
+                                          leftText: "s1",
+                                          rightImage: UIImage(named:"s2")!,
+                                          rightText: "s2")
+                cell.data = model
+                cell.delegateforTwoBigViewsCell = self
+                cell.loadContent()
+                return cell
                 
-                //先給左邊按鈕假圖假字
-                cell.leftImageView.image = UIImage(named: "s1")
-                cell.leftLabel.text = "s1"
-                //先給右邊按鈕假圖假字
-                cell.rightImageView.image = UIImage(named: "s2")
-                cell.rightLabel.text = "s2"
+//                //先給左邊按鈕假圖假字
+//                cell.leftImageView.image = UIImage(named: "s1")
+//                cell.leftLabel.text = "s1"
+//                //先給右邊按鈕假圖假字
+//                cell.rightImageView.image = UIImage(named: "s2")
+//                cell.rightLabel.text = "s2"
                 
                 //設定TwoBigViewsDelegate的Delegate為此ViewController
-                cell.delegateforTwoBigViewsCell = self
-                return cell
+//                cell.delegateforTwoBigViewsCell = self
+                
             }else if indexPath.row == 1{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "threeSmallViewsCell", for: indexPath) as! ThreeSmallViewsCell
                 //先給左邊按鈕假圖假字
