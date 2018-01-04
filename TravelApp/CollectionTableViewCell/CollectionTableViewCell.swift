@@ -8,10 +8,19 @@
 
 import UIKit
 
+//為了偵測鑲嵌在tableViewCell中的CollectionViewCell而寫的protocol
+protocol CollectionViewDidSelectDelegate{
+    func didSelectItemInCollectionView()
+}
+
 class CollectionTableViewCell: UITableViewCell,UICollectionViewDelegate, UICollectionViewDataSource {
 
     //建立種類陣列
     var categoryArray = ["scene","activity","season","meal","shopping"]
+    
+    //為了偵測鑲嵌在tableViewCell中的CollectionViewCell
+    var delegateforCollectionViewItem:CollectionViewDidSelectDelegate?
+    
     
     
     //進行collectionView與此TableViewCell的連結
@@ -53,6 +62,8 @@ class CollectionTableViewCell: UITableViewCell,UICollectionViewDelegate, UIColle
     //偵測collectionView中哪個item被點到(item也是從0開始算)
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
+        //呼叫delegateforCollectionViewItem中的方法
+            delegateforCollectionViewItem?.didSelectItemInCollectionView()
     }
     
     

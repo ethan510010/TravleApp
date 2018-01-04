@@ -10,9 +10,9 @@ import UIKit
 
 class MainTableViewController: UITableViewController, TwoBigViewsDelegate, ThreeSmallViewsDelegate, OneBigViewOneSmallViewDelegate{
     
-    class func showWebView(url:String) {
-        
-    }
+//    class func showWebView(url:String) {
+//
+//    }
     
     
      //建立URL資訊
@@ -129,19 +129,25 @@ class MainTableViewController: UITableViewController, TwoBigViewsDelegate, Three
         //第三個CollectionCell部分
         }else if indexPath.section == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "collectionCell", for: indexPath) as! CollectionTableViewCell
+            
+            //處理CollectionViewCell被點擊到的事件
+            cell.delegateforCollectionViewItem = self
             return cell
         // Repeat Section的部分
         }else if indexPath.section == 3{
             
             if indexPath.row == 0 {
                let cell = tableView.dequeueReusableCell(withIdentifier: "twoBigViewsCell", for: indexPath) as! TwoBigViewsCell
+                //練習MVC
                 let model = Section3Model(leftImage: UIImage(named:"s1")!,
                                           leftText: "s1",
                                           rightImage: UIImage(named:"s2")!,
                                           rightText: "s2")
+                
                 cell.data = model
-                cell.delegateforTwoBigViewsCell = self
                 cell.loadContent()
+                
+                cell.delegateforTwoBigViewsCell = self
                 return cell
                 
 //                //先給左邊按鈕假圖假字
@@ -284,5 +290,14 @@ class MainTableViewController: UITableViewController, TwoBigViewsDelegate, Three
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         view.tintColor = .white
     }
+    
+}
+
+//讓mainTableViewController來處理CollectionViewCell被點到的事件
+extension MainTableViewController: CollectionViewDidSelectDelegate{
+    func didSelectItemInCollectionView() {
+        performSegue(withIdentifier: "CollectionViewTurntoAnotherTableView", sender: nil)
+    }
+    
     
 }

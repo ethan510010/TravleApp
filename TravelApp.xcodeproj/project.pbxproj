@@ -21,7 +21,7 @@
 		D69F97DF1FF61676007A865F /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F97DE1FF61676007A865F /* CollectionTableViewCell.swift */; };
 		D6C7759C1FF617F800486A2B /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7759B1FF617F800486A2B /* MyCollectionViewCell.swift */; };
 		D6EAF0E91FFCD61F00AF3ECC /* Section3Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAF0E81FFCD61F00AF3ECC /* Section3Model.swift */; };
-		D6EAF0EC1FFCD86300AF3ECC /* FoodAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAF0EB1FFCD86300AF3ECC /* FoodAPI.swift */; };
+		D6EAF0EC1FFCD86300AF3ECC /* FakeAPIForTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAF0EB1FFCD86300AF3ECC /* FakeAPIForTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		D69F97DE1FF61676007A865F /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
 		D6C7759B1FF617F800486A2B /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		D6EAF0E81FFCD61F00AF3ECC /* Section3Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section3Model.swift; sourceTree = "<group>"; };
-		D6EAF0EB1FFCD86300AF3ECC /* FoodAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAPI.swift; sourceTree = "<group>"; };
+		D6EAF0EB1FFCD86300AF3ECC /* FakeAPIForTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIForTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,7 @@
 		D6EAF0EA1FFCD85C00AF3ECC /* API */ = {
 			isa = PBXGroup;
 			children = (
-				D6EAF0EB1FFCD86300AF3ECC /* FoodAPI.swift */,
+				D6EAF0EB1FFCD86300AF3ECC /* FakeAPIForTest.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -200,7 +200,7 @@
 			files = (
 				D63F8DDA1FFB1BA700C4CDE9 /* OneBigViewOneSmallViewCell.swift in Sources */,
 				D63F8E371FFB667400C4CDE9 /* MyWebViewController.swift in Sources */,
-				D6EAF0EC1FFCD86300AF3ECC /* FoodAPI.swift in Sources */,
+				D6EAF0EC1FFCD86300AF3ECC /* FakeAPIForTest.swift in Sources */,
 				D69F97DF1FF61676007A865F /* CollectionTableViewCell.swift in Sources */,
 				D69F97DB1FF60C9F007A865F /* ImageTableViewCell.swift in Sources */,
 				D6C7759C1FF617F800486A2B /* MyCollectionViewCell.swift in Sources */,

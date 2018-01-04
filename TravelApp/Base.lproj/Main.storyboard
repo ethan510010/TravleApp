@@ -319,6 +319,7 @@
                     <size key="freeformSize" width="375" height="1500"/>
                     <connections>
                         <segue destination="Zyw-2a-qhr" kind="show" identifier="TurntoWebViewSegue" id="TWc-Y4-N8U"/>
+                        <segue destination="z7W-Wq-X8U" kind="show" identifier="CollectionViewTurntoAnotherTableView" id="HbE-5U-MRW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYC-mc-Y4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -332,7 +333,7 @@
                     <view key="view" contentMode="scaleToFill" id="eix-N0-xi1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.61458616580000003" green="0.65920668630000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="vNy-8n-nz4"/>
                     </view>
                 </viewController>
@@ -394,6 +395,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="vhK-o0-E6A"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ELM-L0-wwo">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
