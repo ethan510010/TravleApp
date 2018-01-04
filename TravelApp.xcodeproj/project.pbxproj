@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D629F2F81FFE10AD002A8911 /* CollectionViewCellConnectAnotherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629F2F71FFE10AD002A8911 /* CollectionViewCellConnectAnotherTableViewController.swift */; };
+		D629F2FD1FFE141D002A8911 /* AnotherSuperBigViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629F2FC1FFE141D002A8911 /* AnotherSuperBigViewCell.swift */; };
+		D629F2FF1FFE1483002A8911 /* AnotherThreeSmallViewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629F2FE1FFE1483002A8911 /* AnotherThreeSmallViewsCell.swift */; };
+		D629F3011FFE1514002A8911 /* AnotherOneBigViewOneSmallViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629F3001FFE1514002A8911 /* AnotherOneBigViewOneSmallViewCell.swift */; };
 		D63F8DD61FFB1B3F00C4CDE9 /* TwoBigViewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63F8DD51FFB1B3F00C4CDE9 /* TwoBigViewsCell.swift */; };
 		D63F8DD81FFB1B6F00C4CDE9 /* ThreeSmallViewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63F8DD71FFB1B6F00C4CDE9 /* ThreeSmallViewsCell.swift */; };
 		D63F8DDA1FFB1BA700C4CDE9 /* OneBigViewOneSmallViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63F8DD91FFB1BA700C4CDE9 /* OneBigViewOneSmallViewCell.swift */; };
@@ -25,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D629F2F71FFE10AD002A8911 /* CollectionViewCellConnectAnotherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellConnectAnotherTableViewController.swift; sourceTree = "<group>"; };
+		D629F2FC1FFE141D002A8911 /* AnotherSuperBigViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherSuperBigViewCell.swift; sourceTree = "<group>"; };
+		D629F2FE1FFE1483002A8911 /* AnotherThreeSmallViewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherThreeSmallViewsCell.swift; sourceTree = "<group>"; };
+		D629F3001FFE1514002A8911 /* AnotherOneBigViewOneSmallViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherOneBigViewOneSmallViewCell.swift; sourceTree = "<group>"; };
 		D63F8DD51FFB1B3F00C4CDE9 /* TwoBigViewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoBigViewsCell.swift; sourceTree = "<group>"; };
 		D63F8DD71FFB1B6F00C4CDE9 /* ThreeSmallViewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeSmallViewsCell.swift; sourceTree = "<group>"; };
 		D63F8DD91FFB1BA700C4CDE9 /* OneBigViewOneSmallViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneBigViewOneSmallViewCell.swift; sourceTree = "<group>"; };
@@ -55,6 +63,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D629F2F91FFE1102002A8911 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				D63F8E361FFB667400C4CDE9 /* MyWebViewController.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		D629F2FA1FFE110E002A8911 /* CollectionViewItemConnectAnotherTableView */ = {
+			isa = PBXGroup;
+			children = (
+				D629F2F71FFE10AD002A8911 /* CollectionViewCellConnectAnotherTableViewController.swift */,
+				D629F2FB1FFE13D7002A8911 /* AnotherTableViewThreeCells */,
+			);
+			path = CollectionViewItemConnectAnotherTableView;
+			sourceTree = "<group>";
+		};
+		D629F2FB1FFE13D7002A8911 /* AnotherTableViewThreeCells */ = {
+			isa = PBXGroup;
+			children = (
+				D629F2FC1FFE141D002A8911 /* AnotherSuperBigViewCell.swift */,
+				D629F2FE1FFE1483002A8911 /* AnotherThreeSmallViewsCell.swift */,
+				D629F3001FFE1514002A8911 /* AnotherOneBigViewOneSmallViewCell.swift */,
+			);
+			path = AnotherTableViewThreeCells;
+			sourceTree = "<group>";
+		};
 		D63F8DD41FFB1AEC00C4CDE9 /* RepeatSection */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +128,8 @@
 				D6EAF0E71FFCD5DA00AF3ECC /* Model */,
 				D69F97E01FF616F8007A865F /* CollectionTableViewCell */,
 				D63F8DD41FFB1AEC00C4CDE9 /* RepeatSection */,
-				D63F8E361FFB667400C4CDE9 /* MyWebViewController.swift */,
+				D629F2F91FFE1102002A8911 /* WebView */,
+				D629F2FA1FFE110E002A8911 /* CollectionViewItemConnectAnotherTableView */,
 				D69F97CD1FF60A2F007A865F /* Assets.xcassets */,
 				D69F97CF1FF60A2F007A865F /* LaunchScreen.storyboard */,
 				D69F97D21FF60A2F007A865F /* Info.plist */,
@@ -202,14 +238,18 @@
 				D63F8E371FFB667400C4CDE9 /* MyWebViewController.swift in Sources */,
 				D6EAF0EC1FFCD86300AF3ECC /* FakeAPIForTest.swift in Sources */,
 				D69F97DF1FF61676007A865F /* CollectionTableViewCell.swift in Sources */,
+				D629F2FD1FFE141D002A8911 /* AnotherSuperBigViewCell.swift in Sources */,
 				D69F97DB1FF60C9F007A865F /* ImageTableViewCell.swift in Sources */,
 				D6C7759C1FF617F800486A2B /* MyCollectionViewCell.swift in Sources */,
 				D6EAF0E91FFCD61F00AF3ECC /* Section3Model.swift in Sources */,
+				D629F3011FFE1514002A8911 /* AnotherOneBigViewOneSmallViewCell.swift in Sources */,
 				D63F8DD81FFB1B6F00C4CDE9 /* ThreeSmallViewsCell.swift in Sources */,
 				D63F8DD61FFB1B3F00C4CDE9 /* TwoBigViewsCell.swift in Sources */,
 				D69F97D91FF60BAB007A865F /* MainTableViewController.swift in Sources */,
+				D629F2F81FFE10AD002A8911 /* CollectionViewCellConnectAnotherTableViewController.swift in Sources */,
 				D69F97DD1FF61474007A865F /* MapTableViewCell.swift in Sources */,
 				D69F97C71FF60A2F007A865F /* AppDelegate.swift in Sources */,
+				D629F2FF1FFE1483002A8911 /* AnotherThreeSmallViewsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

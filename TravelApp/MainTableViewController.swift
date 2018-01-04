@@ -293,7 +293,7 @@ class MainTableViewController: UITableViewController, TwoBigViewsDelegate, Three
     
 }
 
-//讓mainTableViewController來處理CollectionViewCell被點到的事件
+//讓MainTableViewController來處理CollectionViewCell被點到的事件
 extension MainTableViewController: CollectionViewDidSelectDelegate{
     func didSelectItemInCollectionView() {
         performSegue(withIdentifier: "CollectionViewTurntoAnotherTableView", sender: nil)

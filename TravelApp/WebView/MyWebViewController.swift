@@ -10,6 +10,7 @@ import UIKit
 
 class MyWebViewController: UIViewController {
 
+    //從前面傳過來的資料（repeatSection的button）
     var urlFromViewOne:String?
     
     @IBOutlet weak var myWebView: UIWebView!
