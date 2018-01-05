@@ -8,7 +8,14 @@
 
 import UIKit
 
+protocol AnotherOneBigViewOneSmallViewDelegate {
+    func didTapAnotherOneBigViewOneSmallViewLeftButton()
+    func didTapAnotherOneBigViewOneSmallViewRightButton()
+}
+
 class AnotherOneBigViewOneSmallViewCell: UITableViewCell {
+    
+    var delegateForAnotherOneBigViewOneSmallViewCell:AnotherOneBigViewOneSmallViewDelegate?
     
     //處理左半邊的大按鈕
     
@@ -17,6 +24,7 @@ class AnotherOneBigViewOneSmallViewCell: UITableViewCell {
     @IBOutlet weak var anotherOneBigOneSmallViewCellLeftLabel: UILabel!
     
     @IBAction func anotherOneBigOneSmallViewCellLeftButton(_ sender: UIButton) {
+        delegateForAnotherOneBigViewOneSmallViewCell?.didTapAnotherOneBigViewOneSmallViewLeftButton()
     }
     
     //處理右半邊的小按鈕
@@ -26,6 +34,7 @@ class AnotherOneBigViewOneSmallViewCell: UITableViewCell {
     @IBOutlet weak var anotherOneBigOneSmallViewCellRightLabel: UILabel!
     
     @IBAction func anotherOneBigOneSmallViewCellRightButton(_ sender: UIButton) {
+        delegateForAnotherOneBigViewOneSmallViewCell?.didTapAnotherOneBigViewOneSmallViewRightButton()
     }
     
     

@@ -63,7 +63,7 @@ class CollectionTableViewCell: UITableViewCell,UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
         //呼叫delegateforCollectionViewItem中的方法
-            delegateforCollectionViewItem?.didSelectItemInCollectionView()
+        delegateforCollectionViewItem?.didSelectItemInCollectionView()
     }
     
     

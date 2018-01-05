@@ -8,8 +8,16 @@
 
 import UIKit
 
+protocol AnotherThreeSmallViewsDelegate {
+    func didTapAnotherThreeSmallViewsLeftButton()
+    func didTapAnotherThreeSmallViewsCenterButton()
+    func didTapAnotherThreeSmallViewsRightButton()
+}
+
 class AnotherThreeSmallViewsCell: UITableViewCell {
     
+    
+    var delegateForAnotherThreeSmallViewsCell:AnotherThreeSmallViewsDelegate?
     
     //處理左邊的按鈕
     @IBOutlet weak var anotherSmallThreeViewsCellLeftImageView: UIImageView!
@@ -19,6 +27,7 @@ class AnotherThreeSmallViewsCell: UITableViewCell {
     
     
     @IBAction func anotherSmallThreeViewsCellLeftButton(_ sender: UIButton) {
+        delegateForAnotherThreeSmallViewsCell?.didTapAnotherThreeSmallViewsLeftButton()
     }
     
     
@@ -28,6 +37,7 @@ class AnotherThreeSmallViewsCell: UITableViewCell {
     @IBOutlet weak var anotherSmallThreeViewsCellCenterLabel: UILabel!
     
     @IBAction func anotherSmallThreeViewsCellCenterButton(_ sender: UIButton) {
+        delegateForAnotherThreeSmallViewsCell?.didTapAnotherThreeSmallViewsCenterButton()
     }
     
     
@@ -38,6 +48,7 @@ class AnotherThreeSmallViewsCell: UITableViewCell {
     @IBOutlet weak var anotherSmallThreeViewsCellRightLabel: UILabel!
     
     @IBAction func anotherSmallThreeViewsCellRightButton(_ sender: UIButton) {
+        delegateForAnotherThreeSmallViewsCell?.didTapAnotherThreeSmallViewsRightButton()
     }
     
     

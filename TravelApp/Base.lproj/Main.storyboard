@@ -353,7 +353,6 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebv-fJ-a2O">
                                                     <rect key="frame" x="46" y="11" width="283" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
                                                     <connections>
                                                         <action selector="anotherTableViewOneSuperBigViewCellButton:" destination="TJP-CU-Ncp" eventType="touchUpInside" id="YVe-Zf-Mba"/>
                                                     </connections>
@@ -393,7 +392,6 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUu-Sc-xVT">
                                                     <rect key="frame" x="15" y="15" width="95" height="115"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
                                                     <connections>
                                                         <action selector="anotherSmallThreeViewsCellLeftButton:" destination="PJL-0l-w8q" eventType="touchUpInside" id="cbP-o5-qel"/>
                                                     </connections>
@@ -423,7 +421,6 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cty-zO-EjN">
                                                     <rect key="frame" x="140" y="15" width="95" height="115"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
                                                     <connections>
                                                         <action selector="anotherSmallThreeViewsCellCenterButton:" destination="PJL-0l-w8q" eventType="touchUpInside" id="Ger-vo-z15"/>
                                                     </connections>
@@ -431,7 +428,6 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlA-Lo-Nnn">
                                                     <rect key="frame" x="265" y="15" width="95" height="115"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
                                                     <connections>
                                                         <action selector="anotherSmallThreeViewsCellRightButton:" destination="PJL-0l-w8q" eventType="touchUpInside" id="Zp5-c9-r4O"/>
                                                     </connections>
@@ -468,7 +464,6 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzk-y8-Ue3">
                                                     <rect key="frame" x="15" y="15" width="220" height="115"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
                                                     <connections>
                                                         <action selector="anotherOneBigOneSmallViewCellLeftButton:" destination="bUM-Tx-myQ" eventType="touchUpInside" id="hT1-UM-7Am"/>
                                                     </connections>
@@ -487,7 +482,6 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcu-S2-8Cb">
                                                     <rect key="frame" x="265" y="15" width="95" height="115"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
                                                     <connections>
                                                         <action selector="anotherOneBigOneSmallViewCellRightButton:" destination="bUM-Tx-myQ" eventType="touchUpInside" id="Nbm-79-9lt"/>
                                                     </connections>
@@ -508,11 +502,27 @@
                     </view>
                     <connections>
                         <outlet property="collectionViewCellConnectAnotherTableView" destination="oVR-98-f2e" id="QYG-CH-9in"/>
+                        <segue destination="l2l-fs-60u" kind="show" identifier="showAnotherWebViewSegue" id="SQE-Oe-qhH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNH-9g-oE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3333.5999999999999" y="-516.79160419790105"/>
+        </scene>
+        <!--Another Web View View Controller-->
+        <scene sceneID="3Kg-JY-SMr">
+            <objects>
+                <viewController id="l2l-fs-60u" customClass="AnotherWebViewViewController" customModule="TravelApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gik-Sd-LM1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hcQ-V6-dJ1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MFf-k1-x9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4384" y="-510"/>
         </scene>
         <!--My Web View Controller-->
         <scene sceneID="dYA-HY-HPp">

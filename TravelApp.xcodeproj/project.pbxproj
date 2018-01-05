@@ -24,6 +24,7 @@
 		D69F97DD1FF61474007A865F /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F97DC1FF61474007A865F /* MapTableViewCell.swift */; };
 		D69F97DF1FF61676007A865F /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F97DE1FF61676007A865F /* CollectionTableViewCell.swift */; };
 		D6C7759C1FF617F800486A2B /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7759B1FF617F800486A2B /* MyCollectionViewCell.swift */; };
+		D6CD6FDD1FFF5CD300E23ACF /* AnotherWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD6FDC1FFF5CD300E23ACF /* AnotherWebViewViewController.swift */; };
 		D6EAF0E91FFCD61F00AF3ECC /* Section3Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAF0E81FFCD61F00AF3ECC /* Section3Model.swift */; };
 		D6EAF0EC1FFCD86300AF3ECC /* FakeAPIForTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAF0EB1FFCD86300AF3ECC /* FakeAPIForTest.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		D69F97DC1FF61474007A865F /* MapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
 		D69F97DE1FF61676007A865F /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
 		D6C7759B1FF617F800486A2B /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6CD6FDC1FFF5CD300E23ACF /* AnotherWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherWebViewViewController.swift; sourceTree = "<group>"; };
 		D6EAF0E81FFCD61F00AF3ECC /* Section3Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section3Model.swift; sourceTree = "<group>"; };
 		D6EAF0EB1FFCD86300AF3ECC /* FakeAPIForTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIForTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +134,7 @@
 				D629F2FA1FFE110E002A8911 /* CollectionViewItemConnectAnotherTableView */,
 				D69F97CD1FF60A2F007A865F /* Assets.xcassets */,
 				D69F97CF1FF60A2F007A865F /* LaunchScreen.storyboard */,
+				D6CD6FDE1FFF5CD800E23ACF /* AnotherWebView */,
 				D69F97D21FF60A2F007A865F /* Info.plist */,
 			);
 			path = TravelApp;
@@ -144,6 +147,14 @@
 				D6C7759B1FF617F800486A2B /* MyCollectionViewCell.swift */,
 			);
 			path = CollectionTableViewCell;
+			sourceTree = "<group>";
+		};
+		D6CD6FDE1FFF5CD800E23ACF /* AnotherWebView */ = {
+			isa = PBXGroup;
+			children = (
+				D6CD6FDC1FFF5CD300E23ACF /* AnotherWebViewViewController.swift */,
+			);
+			path = AnotherWebView;
 			sourceTree = "<group>";
 		};
 		D6EAF0E71FFCD5DA00AF3ECC /* Model */ = {
@@ -240,6 +251,7 @@
 				D69F97DF1FF61676007A865F /* CollectionTableViewCell.swift in Sources */,
 				D629F2FD1FFE141D002A8911 /* AnotherSuperBigViewCell.swift in Sources */,
 				D69F97DB1FF60C9F007A865F /* ImageTableViewCell.swift in Sources */,
+				D6CD6FDD1FFF5CD300E23ACF /* AnotherWebViewViewController.swift in Sources */,
 				D6C7759C1FF617F800486A2B /* MyCollectionViewCell.swift in Sources */,
 				D6EAF0E91FFCD61F00AF3ECC /* Section3Model.swift in Sources */,
 				D629F3011FFE1514002A8911 /* AnotherOneBigViewOneSmallViewCell.swift in Sources */,

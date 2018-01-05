@@ -139,11 +139,12 @@ class MainTableViewController: UITableViewController, TwoBigViewsDelegate, Three
             if indexPath.row == 0 {
                let cell = tableView.dequeueReusableCell(withIdentifier: "twoBigViewsCell", for: indexPath) as! TwoBigViewsCell
                 //練習MVC
+                //實體化Section3Model
                 let model = Section3Model(leftImage: UIImage(named:"s1")!,
                                           leftText: "s1",
                                           rightImage: UIImage(named:"s2")!,
                                           rightText: "s2")
-                
+                //已經把cell轉型成TwoBigViewsCell所以可以呼叫裡面自訂的data屬性及loadContent()方法
                 cell.data = model
                 cell.loadContent()
                 
@@ -186,7 +187,7 @@ class MainTableViewController: UITableViewController, TwoBigViewsDelegate, Three
                 cell.rightImageView.image = UIImage(named: "s7")
                 cell.rightLabel.text = "s7"
                 
-                //設定OneBigViewOneSmallViewDelegate的Delegate為此ViewController
+                //設定OneBigViewOneSmallViewDelegate的Delegate為此TableViewController
                 cell.delegateForOneBigViewOneSmallView = self
                 return  cell
             }

@@ -28,18 +28,45 @@ class CollectionViewCellConnectAnotherTableViewController: UIViewController, UIT
         if indexPath.section == 0{
             //處理第一個Cell:SuperBigViewCell
             if indexPath.row == 0{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "anotherOneSuperBigViewCell", for: indexPath)
-                cell.textLabel?.text = "SuperBig"
+                let cell = tableView.dequeueReusableCell(withIdentifier: "anotherOneSuperBigViewCell", for: indexPath) as! AnotherSuperBigViewCell
+                cell.anotherTableViewOneSuperBigVewCellImageView.image = UIImage(named: "s1")
+                cell.anotherTableViewCellOneSuperBigViewCellLabel.text = "s1"
+                
+                ////設定AnotherOneSuperBigViewDelegate的Delegate為此ViewController
+                cell.delegateForAnotherOneSuperBigViewCell = self
                 return cell
                 //處理第二個Cell:ThreeSmallViewsCell
             }else if indexPath.row == 1{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "anotherThreeSmallViewsCell", for: indexPath)
-                cell.textLabel?.text = "ThreeSmallViews"
+                let cell = tableView.dequeueReusableCell(withIdentifier: "anotherThreeSmallViewsCell", for: indexPath) as! AnotherThreeSmallViewsCell
+                
+                //處理最左邊
+                cell.anotherSmallThreeViewsCellLeftImageView.image = UIImage(named: "s2")
+                cell.anotherSmallThreeViewsCellLeftLabel.text = "s2"
+                
+                //處理中間
+                cell.anotherSmallThreeViewsCellCenterImageView.image = UIImage(named: "s3")
+                cell.anotherSmallThreeViewsCellCenterLabel.text = "s3"
+                
+                //處理右邊
+                cell.anotherSmallThreeViewsCellRightImageView.image = UIImage(named: "s4")
+                cell.anotherSmallThreeViewsCellRightLabel.text = "s4"
+                
+                cell.delegateForAnotherThreeSmallViewsCell = self
                 return cell
                 //處理第三個Cell:OneBigViewOneSmallViewCell
             }else{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "anotherOneBigViewOneSmallViewCell", for: indexPath)
-                cell.textLabel?.text = "OneBigViewOneSmallView"
+                let cell = tableView.dequeueReusableCell(withIdentifier: "anotherOneBigViewOneSmallViewCell", for: indexPath) as! AnotherOneBigViewOneSmallViewCell
+                
+                //處理左邊的大按鈕相關
+                cell.anotherOneBigOneSmallViewCellLeftImageView.image = UIImage(named: "s5")
+                cell.anotherOneBigOneSmallViewCellLeftLabel.text = "s5"
+                
+                //處理右邊的小按鈕相關
+                cell.anotherOneBigOneSmallViewCellRightImageView.image = UIImage(named: "s6")
+                cell.anotherOneBigOneSmallViewCellRightLabel.text = "s6"
+                
+                cell.delegateForAnotherOneBigViewOneSmallViewCell = self
+                
                 return cell
             }
         }else{
@@ -89,14 +116,39 @@ class CollectionViewCellConnectAnotherTableViewController: UIViewController, UIT
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+}
+
+//開始處理裡面三種cell(一大、三小、一大一小)的button觸及事件
+extension CollectionViewCellConnectAnotherTableViewController: AnotherOneSuperBigViewDelegate{
+    func didTapAnotherOneSuperBigView() {
+        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: nil)
     }
-    */
+}
 
+extension CollectionViewCellConnectAnotherTableViewController: AnotherThreeSmallViewsDelegate{
+    func didTapAnotherThreeSmallViewsLeftButton() {
+        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: nil)
+    }
+    
+    func didTapAnotherThreeSmallViewsCenterButton() {
+        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: nil)
+    }
+    
+    func didTapAnotherThreeSmallViewsRightButton() {
+        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: nil)
+    }
+    
+}
+
+extension CollectionViewCellConnectAnotherTableViewController: AnotherOneBigViewOneSmallViewDelegate{
+    func didTapAnotherOneBigViewOneSmallViewLeftButton() {
+        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: nil)
+    }
+    
+    func didTapAnotherOneBigViewOneSmallViewRightButton() {
+        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: nil)
+    }
+    
+    
 }

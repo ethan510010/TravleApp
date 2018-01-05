@@ -8,15 +8,23 @@
 
 import UIKit
 
-class AnotherSuperBigViewCell: UITableViewCell {
+protocol AnotherOneSuperBigViewDelegate {
+    func didTapAnotherOneSuperBigView()
+}
 
+class AnotherSuperBigViewCell: UITableViewCell {
     
+    
+    var delegateForAnotherOneSuperBigViewCell:AnotherOneSuperBigViewDelegate?
+
+    //這個Cell只有一個大按鈕
     @IBOutlet weak var anotherTableViewOneSuperBigVewCellImageView: UIImageView!
     
     @IBOutlet weak var anotherTableViewCellOneSuperBigViewCellLabel: UILabel!
     
     
     @IBAction func anotherTableViewOneSuperBigViewCellButton(_ sender: UIButton) {
+        delegateForAnotherOneSuperBigViewCell?.didTapAnotherOneSuperBigView()
     }
     
     override func awakeFromNib() {
