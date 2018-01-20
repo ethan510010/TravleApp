@@ -10,8 +10,8 @@ import UIKit
 
 class CollectionViewCellConnectAnotherTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    
-    
+    //建立網址資訊
+    var anotherUrlArray = ["https://www.apple.com/tw/", "https://tw.yahoo.com","https://www.google.com.tw/?gfe_rd=cr&dcr=0&ei=AUlLWsTOGsqiX4XEueAB","https://hackmd.io","https://www.tripadvisor.com.tw","https://tw.openrice.com/zh/taipei","https://www.icloud.com"]
 
     @IBOutlet weak var collectionViewCellConnectAnotherTableView: UITableView!
     
@@ -120,35 +120,72 @@ class CollectionViewCellConnectAnotherTableViewController: UIViewController, UIT
 }
 
 //開始處理裡面三種cell(一大、三小、一大一小)的button觸及事件
-extension CollectionViewCellConnectAnotherTableViewController: AnotherOneSuperBigViewDelegate{
+extension CollectionViewCellConnectAnotherTableViewController: AnotherOneSuperBigViewDelegate, AnotherThreeSmallViewsDelegate, AnotherOneBigViewOneSmallViewDelegate{
+    
+    //一大
     func didTapAnotherOneSuperBigView() {
-        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: nil)
+        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: anotherUrlArray[0])
     }
-}
-
-extension CollectionViewCellConnectAnotherTableViewController: AnotherThreeSmallViewsDelegate{
+    
+    //三小
     func didTapAnotherThreeSmallViewsLeftButton() {
-        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: nil)
+        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: anotherUrlArray[1])
     }
     
     func didTapAnotherThreeSmallViewsCenterButton() {
-        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: nil)
+        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: anotherUrlArray[2])
     }
     
     func didTapAnotherThreeSmallViewsRightButton() {
-        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: nil)
+        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: anotherUrlArray[3])
     }
     
-}
-
-extension CollectionViewCellConnectAnotherTableViewController: AnotherOneBigViewOneSmallViewDelegate{
+    //一大一小
     func didTapAnotherOneBigViewOneSmallViewLeftButton() {
-        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: nil)
+        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: anotherUrlArray[4])
     }
     
     func didTapAnotherOneBigViewOneSmallViewRightButton() {
-        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: nil)
+        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: anotherUrlArray[5])
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showAnotherWebViewSegue"{
+            if let anotherWebView = segue.destination as? AnotherWebViewViewController{
+                if let anotherViewURL = sender as? String{
+                    anotherWebView.webAddressFromAnotherTableView = anotherViewURL
+                }
+            }
+        }
+    }
 }
+
+//extension CollectionViewCellConnectAnotherTableViewController: AnotherThreeSmallViewsDelegate{
+//    func didTapAnotherThreeSmallViewsLeftButton() {
+//        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: anotherUrlArray[1])
+//    }
+//
+//    func didTapAnotherThreeSmallViewsCenterButton() {
+//        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: anotherUrlArray[2])
+//    }
+//
+//    func didTapAnotherThreeSmallViewsRightButton() {
+//        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: anotherUrlArray[3])
+//    }
+//
+//
+//}
+//
+//extension CollectionViewCellConnectAnotherTableViewController: AnotherOneBigViewOneSmallViewDelegate{
+//    func didTapAnotherOneBigViewOneSmallViewLeftButton() {
+//        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: anotherUrlArray[4])
+//    }
+//
+//    func didTapAnotherOneBigViewOneSmallViewRightButton() {
+//        performSegue(withIdentifier: "showAnotherWebViewSegue", sender: anotherUrlArray[5])
+//    }
+//
+//
+//}
+

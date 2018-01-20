@@ -10,6 +10,10 @@ import UIKit
 import WebKit
 
 class AnotherWebViewViewController: UIViewController {
+    
+    
+    //點按前一個畫面AnotherTableView中的button會連接到不同的網站
+    var webAddressFromAnotherTableView:String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +28,7 @@ class AnotherWebViewViewController: UIViewController {
         //加到畫面上
         self.view.addSubview(webView)
         
-        if let url = URL(string: "https://www.apple.com"){
+        if let url = URL(string:webAddressFromAnotherTableView!){
             let myRequest = URLRequest(url: url)
             webView.load(myRequest)
         }

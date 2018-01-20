@@ -334,9 +334,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oVR-98-f2e">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oVR-98-f2e">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="anotherOneSuperBigViewCell" rowHeight="150" id="TJP-CU-Ncp" customClass="AnotherSuperBigViewCell" customModule="TravelApp" customModuleProvider="target">
@@ -498,8 +497,15 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="oVR-98-f2e" firstAttribute="top" secondItem="vNy-8n-nz4" secondAttribute="top" id="6xu-b5-tCR"/>
+                            <constraint firstItem="oVR-98-f2e" firstAttribute="trailing" secondItem="vNy-8n-nz4" secondAttribute="trailing" id="C1H-Zh-GOW"/>
+                            <constraint firstItem="oVR-98-f2e" firstAttribute="leading" secondItem="vNy-8n-nz4" secondAttribute="leading" id="PxQ-cU-I9m"/>
+                            <constraint firstItem="oVR-98-f2e" firstAttribute="bottom" secondItem="vNy-8n-nz4" secondAttribute="bottom" id="TgT-VR-jrn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vNy-8n-nz4"/>
                     </view>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="collectionViewCellConnectAnotherTableView" destination="oVR-98-f2e" id="QYG-CH-9in"/>
                         <segue destination="l2l-fs-60u" kind="show" identifier="showAnotherWebViewSegue" id="SQE-Oe-qhH"/>
